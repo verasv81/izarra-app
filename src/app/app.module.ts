@@ -16,6 +16,7 @@ import { SpecialistsCardComponent } from './home/specialists/specialists-card/sp
 import { PartnersComponent } from './home/partners/partners.component';
 import { FooterHeroComponent } from './footer-hero/footer-hero.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ContactsComponent } from './contacts/contacts.component';
     SpecialistsCardComponent,
     PartnersComponent,
     FooterHeroComponent,
-    ContactsComponent
+    ContactsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
