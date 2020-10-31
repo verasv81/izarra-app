@@ -3,10 +3,8 @@
   border-bottom: 1px solid #EFF0F7;
 }
 
-.brand {
-  font-weight: 800; 
-  font-size: 32px;
-  color: #51289C;
+.logo {
+  width: 100px;
 }
 
 .menu-item {
@@ -16,13 +14,8 @@
   letter-spacing: 0.75px;
   color:  #51289C!important;
   background-color: transparent;
-}
-
-.logo {
-  position: absolute;
-  top: 19px;
-  left: 312px;
-  width: 18px;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
 .active {
@@ -41,4 +34,17 @@
   width: 143px;
   height: 48px;
   margin-left: 43px;
+}
+
+.expand-btn {
+  outline: none;
+  border: none;
+
+}
+
+.expand-container {
+  display: flex;
+  // flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

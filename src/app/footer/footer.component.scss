@@ -1,0 +1,31 @@
+.footer-container{
+  background-color: #14142B;
+  color: #D6D8E7;
+  margin: 0!important;
+  height: 60px;
+  padding: 13px 50px 0 50px;
+}
+
+.menu-list li{
+  display: inline;
+  margin: 0 15px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  a {
+    color: #D6D8E7;
+    text-decoration: none;
+  }
+}
+
+.trademark {
+  color: #6E7191!important;
+}
+
+.contacts {
+  font-weight: 600!important;
+  font-size: 14px!important;
+  line-height: 34px!important;
+  color: #F7F7FC!important;
+}

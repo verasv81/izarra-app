@@ -1,0 +1,38 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[scss]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "all",
+    "editor.acceptSuggestionOnEnter": "off"
+  },
+  "editor.autoIndent": true,
+  "tslint.autoFixOnSave": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": true,
+  "git.ignoreLimitWarning": true,
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "html.format.wrapAttributes": "force-expand-multiline"
+}
