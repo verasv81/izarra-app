@@ -14,7 +14,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SpecialistsComponent } from './home/specialists/specialists.component';
 import { SpecialistsCardComponent } from './home/specialists/specialists-card/specialists-card.component';
 import { PartnersComponent } from './home/partners/partners.component';
-import { FooterHeroComponent } from './home/footer-hero/footer-hero.component';
+import { FooterHeroComponent } from './footer-hero/footer-hero.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FooterHeroComponent } from './home/footer-hero/footer-hero.component';
     SpecialistsComponent,
     SpecialistsCardComponent,
     PartnersComponent,
-    FooterHeroComponent
+    FooterHeroComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
