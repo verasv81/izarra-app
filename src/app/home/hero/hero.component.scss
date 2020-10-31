@@ -28,29 +28,6 @@
   width: 1100px;
 }
 
-/* smartphones, iPhone, portrait 480x320 phones */ 
-@media (min-width:320px)  { 
-  .hero-title {
-    font-size: 20px;
-    line-height: 34px;
-   }
-
-   .hero-description {
-     font-size: 14px;
-     line-height: 24px;
-   }
-}
-/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-@media (min-width:481px)  { 
-  .hero-title {
-    font-size: 24px!important;
-    line-height: 54px;
-   }
-   .hero-image {
-    width: 665px!important;
-  }
- }
-
  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 @media (min-width:641px)  { 
   .hero-title {
