@@ -17,6 +17,11 @@ import { PartnersComponent } from './home/partners/partners.component';
 import { FooterHeroComponent } from './footer-hero/footer-hero.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { AboutComponent } from './about/about.component';
+import { BlogComponent } from './blog/blog.component';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+import { BlogCardComponent } from './blog/blog-card/blog-card.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +38,17 @@ import { AboutComponent } from './about/about.component';
     PartnersComponent,
     FooterHeroComponent,
     ContactsComponent,
-    AboutComponent
+    AboutComponent,
+    BlogComponent,
+    BlogCardComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    CardModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
