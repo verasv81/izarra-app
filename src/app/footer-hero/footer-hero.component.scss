@@ -1,0 +1,60 @@
+.footer-container {
+  background: url('https://s3-alpha-sig.figma.com/img/da88/02db/6fee6396163ef1816af0808bc73eb970?Expires=1604880000&Signature=MKAQia9n-NW8PGy2mLIJBkRfkuHxT-ijtA9G0nEAzMRrVIoNTLNCf~Bu9V7xZWT3emlSM-bOBKVfKuq8Y6e6UBszgebLJeg6FnybjxXsXgtBvjQRxCHiCyubMDzgQ42RLZIqjcthVs-rsuzcJpuoVmf-CE5F1mVRfMlpzZrQ~98Q5nFX4noCo5Lz7wHj366RthgvuYEqPk8eZ-J87U~exayf6GWF0eQmWp3T4Nzb9cutQ5IQfn2siA7LbvO57jaxfHe8YeCBEhLALrwfUfIoix~X9tZq~xZHjSsG97a3AHpVV23zDvxh70-1Gshzv~8C8ZsZFjcwtUXH8u979oxpnA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA') no-repeat center center;
+  width: 100%;
+  height: 482px;
+  background-size: cover;
+  position: relative;
+}
+
+.footer-mask {
+  background-color: rgba(81,40,156,1);
+  width: 100%;
+  height: 482px;
+  z-index: 2;
+  opacity: .8;
+}
+
+.footer-hero-content {
+  top: 20%;
+  left: 25%;
+  width: 50%;
+  position: absolute;
+  z-index: 3;
+  color: white;
+}
+
+.footer-heading {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 64px;
+  /* or 133% */
+  text-align: center;
+  letter-spacing: 1px;
+
+}
+
+.feat {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  font-feature-settings: 'liga' off;
+}
+
+.catalog-btn {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height, or 175% */
+  letter-spacing: 0.75px;
+
+  /* Primary / Purple */
+  color: #51289C;
+  background-color: #fff!important;
+  padding: 14px 27px;
+}
+
+.feature-list {
+  width: 900px;
+  margin-left: -17px;
+}

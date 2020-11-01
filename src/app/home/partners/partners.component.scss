@@ -1,0 +1,39 @@
+.logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.partners-container {
+  margin: 20% 9% 9%;
+  position: relative;
+}
+
+.section-header {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 34px;
+  letter-spacing: 1px;
+  color: #14142B;
+}
+
+.section-description {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #14142B;
+}
+
+.leaf {
+  position: absolute;
+  top: 134px;
+  left: 100px;
+}
+
+.leaf2 {
+  position: absolute;
+  top: -94px;
+  left: 296px;
+  z-index: -1;
+}
