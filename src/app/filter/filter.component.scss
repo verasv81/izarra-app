@@ -1,0 +1,44 @@
+.filter-btn {
+  border: none;
+  outline: none!important;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #4E4B66;
+  padding-left: 0;
+}
+
+input[type="checkbox"]  {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #D6D8E7!important;
+  box-sizing: border-box;
+  border-radius: 1px;
+}
+
+input[type="checkbox"] :checked {
+  background-color: #ffffff!important;
+}
+
+.line {
+  border: 1px solid #EFF0F7;
+}
+
+ p {
+  font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height, or 175% */
+letter-spacing: 0.75px;
+
+/* Grayscale / Medium */
+color: #4E4B66;
+}
+
+.filter-icon {
+  float: right;
+  margin-top: 8px;
+}

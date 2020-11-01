@@ -17,11 +17,16 @@ import { PartnersComponent } from './home/partners/partners.component';
 import { FooterHeroComponent } from './footer-hero/footer-hero.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { AboutComponent } from './about/about.component';
+import { CatalogComponent } from './catalog/catalog.component';
+import { FilterComponent } from './filter/filter.component';
+import { AccordionModule } from 'primeng/accordion';
 import { BlogComponent } from './blog/blog.component';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { BlogCardComponent } from './blog/blog-card/blog-card.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { ServiceCardComponent } from './service-card/service-card.component';
+import { ServiceSearchComponent } from './service-search/service-search.component';
 
 @NgModule({
   declarations: [
@@ -39,16 +44,21 @@ import { PaginationComponent } from './pagination/pagination.component';
     FooterHeroComponent,
     ContactsComponent,
     AboutComponent,
+    CatalogComponent,
+    FilterComponent,
     BlogComponent,
     BlogCardComponent,
-    PaginationComponent
+    PaginationComponent,
+    ServiceCardComponent,
+    ServiceSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    AccordionModule,
     CardModule,
-    ButtonModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
