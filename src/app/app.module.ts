@@ -21,6 +21,7 @@ import { BlogComponent } from './blog/blog.component';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { BlogCardComponent } from './blog/blog-card/blog-card.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { BlogCardComponent } from './blog/blog-card/blog-card.component';
     ContactsComponent,
     AboutComponent,
     BlogComponent,
-    BlogCardComponent
+    BlogCardComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
