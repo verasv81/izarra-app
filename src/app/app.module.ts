@@ -25,6 +25,8 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { BlogCardComponent } from './blog/blog-card/blog-card.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { ServiceCardComponent } from './service-card/service-card.component';
+import { ServiceSearchComponent } from './service-search/service-search.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { PaginationComponent } from './pagination/pagination.component';
     FilterComponent,
     BlogComponent,
     BlogCardComponent,
-    PaginationComponent
+    PaginationComponent,
+    ServiceCardComponent,
+    ServiceSearchComponent
   ],
   imports: [
     BrowserModule,
