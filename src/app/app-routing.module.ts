@@ -5,12 +5,14 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 
 const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'catalog', component: CatalogComponent },
   { path: 'blog', component: BlogComponent },
+  { path: 'blog-preview', component: BlogPreviewComponent },
   { path: '', component: HomeComponent },
 ];
 
