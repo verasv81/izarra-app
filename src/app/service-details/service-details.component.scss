@@ -44,3 +44,42 @@
   padding: 10px 24px;
   color: #ffffff;
 }
+
+.service-details-text{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #4E4B66;
+}
+
+.tag-list  li {
+  float: left;
+}
+ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+}
+
+.tag{
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  color: #196096;
+  border-radius: 2px;
+}
+
+.tag-orange {
+
+  background-color: #FFF0D4;
+}
+
+.tag-blue{
+  background-color: #D5F7FF;
+}
+
+.tag-green {
+  background-color: #F3FDFA;
+}

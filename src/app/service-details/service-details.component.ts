@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./service-details.component.scss']
 })
 export class ServiceDetailsComponent implements OnInit {
-
+  tags = ["Decor", "Pre-payment", "Superb 9+"]
   constructor() { }
 
   ngOnInit(): void {
