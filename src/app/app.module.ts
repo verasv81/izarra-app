@@ -29,6 +29,8 @@ import { ServiceCardComponent } from './service-card/service-card.component';
 import { ServiceSearchComponent } from './service-search/service-search.component';
 import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { ArticleContentComponent } from './article-content/article-content.component';
+import { ServiceDetailsComponent } from './service-details/service-details.component';
+import { ReviewCardComponent } from './review-card/review-card.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { ArticleContentComponent } from './article-content/article-content.compo
     ServiceCardComponent,
     ServiceSearchComponent,
     BlogPreviewComponent,
-    ArticleContentComponent
+    ArticleContentComponent,
+    ServiceDetailsComponent,
+    ReviewCardComponent
   ],
   imports: [
     BrowserModule,

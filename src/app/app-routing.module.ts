@@ -6,6 +6,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
+import { ServiceDetailsComponent } from './service-details/service-details.component';
 
 const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'catalog', component: CatalogComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blog-preview', component: BlogPreviewComponent },
+  { path: 'service-details', component: ServiceDetailsComponent },
   { path: '', component: HomeComponent },
 ];
 
