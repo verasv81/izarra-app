@@ -1,7 +1,7 @@
 <app-top-nav></app-top-nav>
 <div class="container mt-5">
   <a
-    href="/blog"
+    href="/catalog"
     style="text-decoration: none;"
   >
     <h4 class="mb-4 catalog-back-button"><svg
@@ -34,25 +34,25 @@
   <div class="row m-5">
     <div class="col-6">
       <img
-        class="service-detail-image"
+        class="d-none d-md-block service-detail-image"
         src="../../assets/card-image.png"
       >
     </div>
-    <div class="col-6">
+    <div class="col col-md-4 company-description">
       <img
         class="service-detail-icon"
         src="https://s3-alpha-sig.figma.com/img/f23b/65e8/e2a63731ceb64f983ac5d31b520862f1?Expires=1605484800&Signature=Uqmd0zP2Nmq6GMbyXo1nEWlFYsmT9fMIOzh3nKlrOOR2CAKJikAi3ECUMkuUKzXcT8ZiqJELd8R5vWL25LYHLQWRYYLHYF4OAnUENp-r7aeskhCDO3HW6JpHybLLf1dmPJZiwkecyV7QXJpXYbLBlZ3HzdAEfVU6LJgVc0YTlS0GUSIU-Ql7iH49PwdesfXwV-uJg7t4o-uNOpfxraaLIYgusuakzPGSmDs7-1VAY1pd4rRbNGBhE4b0WAOQ7MFpVAc7cn4l50cckPjaC1w2M5AaD3hkTHaT2lONYiu1~2VHc7lYbDAbjKDd2EiqVykdA25vmDraI9TygFcXYkED2A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
       >
       <h3 class="mt-5 service-name">Floral Soul</h3>
       <div class="row">
-        <div class="mt-3 col-1">
+        <div class="mt-3 col-2">
           <p class="service-contacts">
             Web:<br>
             Mail:<br>
             Phone:
           </p>
         </div>
-        <div class="mt-3 service-details ml-1 col-4">
+        <div class="mt-3 service-details ml-1 col-6">
           <a href="www.floralsoul.md">www.floralsoul.md</a>
           <p>anastasia@floralsoul.md <br>
             373 76 60 65 20
@@ -67,10 +67,12 @@
             <li class="mr-2"><span class="badge badge-primary tag tag-green">{{tags[2]}}</span></li>
           </ul>
         </div>
-        <div class="col-4">
+      </div>
+      <div class="row mt-5 ">
+        <div class="col-6">
           <button class="btn offer-btn">Solicita Oferta</button>
         </div>
-        <div class="col-4 heart-btn"><svg
+        <div class="pt-2 col-4 heart-btn"><svg
             width="24"
             height="22"
             viewBox="0 0 24 22"
@@ -112,6 +114,24 @@
       How to choose the best ecommerce platform for your online store. Shop around to find the best ecommerce platform
       for your online store. Illustration by OrangeCrush
     </p>
+  </div>
+  <div class="row my-5">
+    <div class="col-6">
+      <app-review-card
+        text="How to choose the best ecommerce platform for your online store. Shop around to find the best ecommerce platform for your online store. Illustration by OrangeCrush"
+        author="Jane Cooper"
+        image="../../assets/oyo.png"
+        company="CEO, Airbnb"
+      ></app-review-card>
+    </div>
+    <div class="col-6">
+      <app-review-card
+        text="How to choose the best ecommerce platform for your online store. Shop around to find the best ecommerce platform for your online store. Illustration by OrangeCrush"
+        author="Jane Cooper"
+        image="../../assets/oyo.png"
+        company="CEO, Airbnb"
+      ></app-review-card>
+    </div>
   </div>
 </div>
 <app-footer></app-footer>

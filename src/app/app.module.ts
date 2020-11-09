@@ -30,6 +30,7 @@ import { ServiceSearchComponent } from './service-search/service-search.componen
 import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { ArticleContentComponent } from './article-content/article-content.component';
 import { ServiceDetailsComponent } from './service-details/service-details.component';
+import { ReviewCardComponent } from './review-card/review-card.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ServiceDetailsComponent } from './service-details/service-details.compo
     ServiceSearchComponent,
     BlogPreviewComponent,
     ArticleContentComponent,
-    ServiceDetailsComponent
+    ServiceDetailsComponent,
+    ReviewCardComponent
   ],
   imports: [
     BrowserModule,
