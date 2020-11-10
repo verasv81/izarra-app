@@ -31,6 +31,7 @@ import { BlogPreviewComponent } from './pages/bolg/blog-preview/blog-preview.com
 import { ArticleContentComponent } from './pages/bolg/article-content/article-content.component';
 import { ServiceDetailsComponent } from './pages/services/service-details/service-details.component';
 import { ReviewCardComponent } from './pages/services/review-card/review-card.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { ReviewCardComponent } from './pages/services/review-card/review-card.co
     FontAwesomeModule,
     AccordionModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    SharedModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

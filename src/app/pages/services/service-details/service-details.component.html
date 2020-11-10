@@ -43,7 +43,7 @@
         class="service-detail-icon"
         src="https://s3-alpha-sig.figma.com/img/f23b/65e8/e2a63731ceb64f983ac5d31b520862f1?Expires=1605484800&Signature=Uqmd0zP2Nmq6GMbyXo1nEWlFYsmT9fMIOzh3nKlrOOR2CAKJikAi3ECUMkuUKzXcT8ZiqJELd8R5vWL25LYHLQWRYYLHYF4OAnUENp-r7aeskhCDO3HW6JpHybLLf1dmPJZiwkecyV7QXJpXYbLBlZ3HzdAEfVU6LJgVc0YTlS0GUSIU-Ql7iH49PwdesfXwV-uJg7t4o-uNOpfxraaLIYgusuakzPGSmDs7-1VAY1pd4rRbNGBhE4b0WAOQ7MFpVAc7cn4l50cckPjaC1w2M5AaD3hkTHaT2lONYiu1~2VHc7lYbDAbjKDd2EiqVykdA25vmDraI9TygFcXYkED2A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
       >
-      <h3 class="mt-5 service-name">Floral Soul</h3>
+      <h3 class="mt-5 service-name">{{company.name}}</h3>
       <div class="row">
         <div class="mt-3 col-2">
           <p class="service-contacts">
@@ -53,9 +53,9 @@
           </p>
         </div>
         <div class="mt-3 service-details ml-1 col-6">
-          <a href="www.floralsoul.md">www.floralsoul.md</a>
-          <p>anastasia@floralsoul.md <br>
-            373 76 60 65 20
+          <a href="www.floralsoul.md">{{company.domain}}</a>
+          <p>{{company.email}} <br>
+            {{company.phone}}
           </p>
         </div>
       </div>
@@ -94,25 +94,10 @@
   </div>
   <div class="mx-5 service-details-text">
     <p>
-      As of 2020, there are somewhere between 12 and 24 million ecommerce stores operating on the net, spread out across
-      the
-      best ecommerce platforms. Anything you want, you can get online… but what if what you want is to become an
-      ecommerce
-      entrepreneur yourself?
+      {{company.description}}
     </p>
     <p>
-      There are lots of different reasons to start an online shop. Maybe you’re planning a new business
-      venture to replace your sole source of income. Maybe the plan is to start a side hustle with room to grow into
-      your
-      full-time source of income. Maybe you want to keep your day job, but use the ecommerce business as a hobby. Or
-      maybe you
-      already run a brick-and-mortar business and ecommerce is just another expansion, like opening up a second store,
-      except
-      online.
-    </p>
-    <p>
-      How to choose the best ecommerce platform for your online store. Shop around to find the best ecommerce platform
-      for your online store. Illustration by OrangeCrush
+      {{company.long_description}}
     </p>
   </div>
   <div class="row my-5">

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-service-card',
@@ -10,11 +10,15 @@ export class ServiceCardComponent implements OnInit {
   @Input() content;
   @Input() image;
   @Input() tags;
-
+  @Output() loadDetails = new EventEmitter<Event>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  load(event) {
+    this.loadDetails.emit(event);
   }
 
 }
