@@ -1,21 +1,23 @@
-<div class="row service-card mt-3">
-  <div
-    class="mt-4 col-2 text-center"
-    (click)="load($event)"
-  >
-    <img
-      src="{{image}}"
-      width="50px"
-    >
-  </div>
+<a
+  href="/service-details"
+  style="text-decoration: none;"
+>
+  <div class="row service-card mt-3">
+    <div class="mt-4 col-2 text-center">
+      <img
+        src="{{image}}"
+        width="50px"
+      >
+    </div>
 
-  <div class="col-9 my-3">
-    <h5 class="title">{{title}}</h5>
-    <p class="content">{{content}}</p>
-    <ul class="tag-list">
-      <li class="mr-2"><span class="badge badge-primary tag tag-orange">{{tags[0]}}</span></li>
-      <li class="mr-2"><span class="badge badge-primary tag tag-blue">{{tags[1]}}</span></li>
-      <li class="mr-2"><span class="badge badge-primary tag tag-green">{{tags[2]}}</span></li>
-    </ul>
+    <div class="col-9 my-3">
+      <h5 class="title">{{title}}</h5>
+      <p class="content">{{content}}</p>
+      <ul class="tag-list">
+        <li class="mr-2"><span class="badge badge-primary tag tag-orange">{{tags[0]}}</span></li>
+        <li class="mr-2"><span class="badge badge-primary tag tag-blue">{{tags[1]}}</span></li>
+        <li class="mr-2"><span class="badge badge-primary tag tag-green">{{tags[2]}}</span></li>
+      </ul>
+    </div>
   </div>
-</div>
+</a>
