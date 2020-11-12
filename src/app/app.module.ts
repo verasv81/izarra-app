@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { CarouselModule } from 'primeng/carousel';
 import { AccordionModule } from 'primeng/accordion';
 import { HomeComponent } from './pages/home/home.component';
 import { TopNavComponent } from './pages/shared/top-nav/top-nav.component';
@@ -70,7 +71,8 @@ import { SharedModule } from './shared/shared.module';
     CardModule,
     ButtonModule,
     SharedModule.forRoot(),
-    FormsModule
+    FormsModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

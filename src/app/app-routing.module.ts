@@ -4,10 +4,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { BlogComponent } from './pages/bolg/blog.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CatalogComponent } from './pages/services/catalog/catalog.component';
 import { BlogPreviewComponent } from './pages/bolg/blog-preview/blog-preview.component';
 import { ServiceDetailsComponent } from './pages/services/service-details/service-details.component';
-import { ServicesDeclaration } from './services';
+import { CatalogComponent } from './pages/services/catalog/catalog.component';
 
 const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },

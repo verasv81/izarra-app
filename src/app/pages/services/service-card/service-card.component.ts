@@ -6,6 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./service-card.component.scss']
 })
 export class ServiceCardComponent implements OnInit {
+  @Input() id;
   @Input() title;
   @Input() content;
   @Input() image;
