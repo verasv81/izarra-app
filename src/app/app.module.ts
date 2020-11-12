@@ -18,7 +18,7 @@ import { FeatureCardComponent } from './pages/home/feature-card/feature-card.com
 import { FooterComponent } from './pages/shared/footer/footer.component';
 import { SpecialistsComponent } from './pages/home/specialists/specialists.component';
 import { SpecialistsCardComponent } from './pages/home/specialists/specialists-card/specialists-card.component';
-import { PartnersComponent } from './pages/home/partners/partners.component';
+import { PartnersComponent } from './pages/shared/partners/partners.component';
 import { FooterHeroComponent } from './pages/shared/footer-hero/footer-hero.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { AboutComponent } from './pages/about/about.component';

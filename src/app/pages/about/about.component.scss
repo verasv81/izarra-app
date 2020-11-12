@@ -23,3 +23,18 @@
   letter-spacing: 0.75px;
   color: #000000;
 }
+
+.about-content {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about-text-container {
+  width: 30%;
+}
+
+@media only screen and (max-width: 1000px){ 
+  .about-text-container {
+    width: 75%!important;
+  }
+}

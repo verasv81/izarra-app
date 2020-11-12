@@ -1,9 +1,3 @@
-.logos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .partners-container {
   margin: 20% 9% 9%;
   position: relative;
@@ -27,13 +21,14 @@
 
 .leaf {
   position: absolute;
-  top: 134px;
+  top: 150px;
   left: 100px;
+  z-index: -1;
 }
 
 .leaf2 {
   position: absolute;
-  top: -94px;
+  top: -76px;
   left: 296px;
   z-index: -1;
 }
