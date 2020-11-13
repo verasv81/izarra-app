@@ -21,14 +21,41 @@
 
 .leaf {
   position: absolute;
-  top: 150px;
+  top: 180px;
   left: 100px;
   z-index: -1;
 }
 
 .leaf2 {
   position: absolute;
-  top: -76px;
+  top: -56px;
   left: 296px;
   z-index: -1;
+}
+
+.leaf2svg {
+  width: 780px;
+}
+
+@media only screen and (max-width: 600px) {
+  .section-header {
+    font-size: 24px!important;
+  }
+
+  .partners-container {
+    margin: 9%!important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .leaf2svg {
+    width: 570px!important;
+  }
+  .leaf { 
+    top: 164px!important;
+  }
+
+  .leaf2 { 
+    top: 15px;
+  }
 }

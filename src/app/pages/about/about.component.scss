@@ -33,6 +33,18 @@
   width: 30%;
 }
 
+@media only screen and (max-width: 600px) {
+  .about-text{
+    font-size: 12px!important;
+    text-align: start;
+  }
+
+  .about-subheading {
+    font-size: 16px!important;
+    text-align: start;
+  }
+}
+
 @media only screen and (max-width: 1000px){ 
   .about-text-container {
     width: 75%!important;

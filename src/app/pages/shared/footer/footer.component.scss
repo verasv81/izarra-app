@@ -6,7 +6,7 @@
   padding: 8px 50px 0 50px;
   margin: 0 auto;
   justify-content: center;
-  
+
   ul {
     display: unset;
     justify-content: center;
@@ -35,11 +35,38 @@
   font-size: 14px!important;
   color: #F7F7FC!important;
 }
-
+@media only screen and (max-width: 600px) {
+   .menu-list li {
+    letter-spacing: 0.45px!important;
+    font-size: 11px!important;
+  }
+}
 @media only screen and (max-width: 900px){ 
 
   .footer-container > ul {
     justify-content: end!important;
     align-items: baseline!important;
+  }
+  
+  .menu-list li {
+    letter-spacing: 0.45px!important;
+    font-size: 12px;
+  }
+
+  .footer-container {
+    justify-content: start!important;
+    padding: 8px 0px 0 20px!important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 1440px) {
+  .menu-list li {
+    letter-spacing: 0.45px!important;
+    font-size: 12px;
+    margin: 8px;
   }
 }

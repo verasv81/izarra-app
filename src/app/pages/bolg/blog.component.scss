@@ -7,3 +7,13 @@
   color: #51289C;
 }
 
+
+.cards {
+  justify-content: start;
+}
+
+@media only screen and (max-width: 600px){
+ .cards {
+    justify-content: center!important;
+  }
+}
