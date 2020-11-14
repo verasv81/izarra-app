@@ -32,5 +32,4 @@ export class ServiceDetailsComponent implements OnInit {
       console.log(this.company);
     });
   }
-
 }
