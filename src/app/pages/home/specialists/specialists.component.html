@@ -1,15 +1,16 @@
 <div class="container specialists-container mb-5">
   <div class="specialist-content">
     <h3 class="specialist-header">Cei mai buni specialiști!</h3>
-    <div class="row">
-      <div class="col-8 specialist-description">
+    <div class="d-flex flex-column flex-md-row">
+      <div class="specialist-description">
         <p>Peste 300 de companii, peste 1 milion de tipuri de servicii</p>
       </div>
       <a
         [routerLink]="['/catalog']"
         style="text-decoration: none;"
+        class="ml-5"
       >
-        <div class="col-4 text-right specialist-link">Vezi toți specialiștii <img
+        <div class="text-right specialist-link">Vezi toți specialiștii <img
             src="../../../assets/back-arrow.png"
             width="16px"
           >
@@ -23,6 +24,9 @@
       [numVisible]="4"
       [numScroll]="1"
       [responsiveOptions]="responsiveOptions"
+      [autoplayInterval]="3000"
+      [circular]="true"
+      [styleClass]="specialist-carousel"
     >
       <ng-template
         let-company

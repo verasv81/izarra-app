@@ -1,0 +1,15 @@
+<p-toast></p-toast>
+
+<p-button
+  [label]="selectedProduct ? selectedProduct.name : 'Select a Product'"
+  icon="pi pi-search"
+  (click)="op.toggle($event)"
+></p-button>
+
+<p-overlayPanel
+  #op
+  [showCloseIcon]="true"
+  [style]="{width: '450px'}"
+>
+  Content
+</p-overlayPanel>

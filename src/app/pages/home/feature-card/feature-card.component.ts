@@ -11,7 +11,7 @@ export class FeatureCardComponent implements OnInit {
   @Input() title;
   @Input() description;
   @Input() btnTitle;
-  @Input() btnColor;
+  @Input() join;
 
   constructor(
     private router: Router

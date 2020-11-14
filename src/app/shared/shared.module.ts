@@ -3,7 +3,8 @@ import { ServicesDeclaration } from '../services';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  exports: [HttpClientModule]
+  exports: [HttpClientModule],
+  declarations: []
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders<SharedModule> {

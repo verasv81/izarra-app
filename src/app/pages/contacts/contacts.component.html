@@ -14,8 +14,8 @@
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
-<div class="row">
-  <div class="col-12 col-lg-4 contacts-container">
+<div class="d-flex flex-column flex-lg-row mb-5 mb-lg-0 contacts">
+  <div class="contacts-container">
     <h3 class="contact-heading mb-4">Contacte</h3>
     <p class="contact-text">Need a hand? Or a high five? <br>Here’s how to reach us:</p>
     <h5 class="contacts-subheading mt-4">Email:</h5>
@@ -23,44 +23,44 @@
     <h5 class="contacts-subheading  mt-4">Phone:</h5>
     <p class="
       contact-text">+373 765 99 556</p>
-    <h5 class="contacts-subheading  mt-4">Adress</h5>
+    <h5 class="contacts-subheading  mt-4">Address</h5>
     <p class="
         contact-text">str. M. Eminescu 24, Chisinau</p>
-
-
   </div>
-  <div class="col-12 col-lg-6 email-container">
-    <h3 class="contact-heading mb-4">Get in touch about everything:</h3>
-    <input
-      type="text"
-      placeholder="Full Name"
-      class="email-input my-3"
-      [(ngModel)]="name"
-    >
-    <input
-      type="text"
-      placeholder="Email"
-      class="email-input my-3"
-      [(ngModel)]="email"
-    />
-    <div style="z-index: 1111;">
-      <textarea
-        placeholder="Your Message"
-        class="email-input message-input my-3"
-        [(ngModel)]="text"
-      ></textarea>
+  <div class="email-container">
+    <div>
+      <img
+        src="../../assets/hero-icon.png"
+        class="d-none d-lg-block contact-icon"
+      >
+      <h3 class="contact-heading mb-4">Get in touch about everything:</h3>
+      <input
+        type="text"
+        placeholder="Full Name"
+        class="email-input my-3"
+        [(ngModel)]="name"
+      >
+      <input
+        type="text"
+        placeholder="Email"
+        class="email-input my-3"
+        [(ngModel)]="email"
+      />
+      <div style="z-index: 999999;">
+        <textarea
+          placeholder="Your Message"
+          class="email-input message-input my-3"
+          [(ngModel)]="text"
+        ></textarea>
+      </div>
+      <button
+        class="btn send-btn mt-3"
+        (click)="send()"
+      >Trimite</button>
     </div>
-    <button
-      class="btn send-btn mt-3"
-      (click)="send()"
-    >Trimite</button>
   </div>
 
 </div>
 
-<img
-  src="../../assets/hero-icon.png"
-  class="d-none d-lg-block contact-icon"
->
 <app-footer-hero></app-footer-hero>
 <app-footer></app-footer>

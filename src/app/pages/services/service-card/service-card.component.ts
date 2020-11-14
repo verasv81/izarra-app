@@ -11,15 +11,9 @@ export class ServiceCardComponent implements OnInit {
   @Input() content;
   @Input() image;
   @Input() tags;
-  @Output() loadDetails = new EventEmitter<Event>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  load(event) {
-    this.loadDetails.emit(event);
-  }
-
 }

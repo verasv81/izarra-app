@@ -27,3 +27,28 @@
     letter-spacing: 0.75px;
     color: #4E4B66;
   }
+
+  .card-img-top {
+    width: 100%!important;
+  }
+
+  .specialist-card {
+    width: 240px; 
+    margin: .4rem;
+  }
+
+  .special-logo {
+    width: 64px;
+    float: right;
+  }
+
+  @media only screen and (max-width: 400px) {
+    .special-logo {
+      width: 44px;
+    }
+
+    .specialist-card {
+    width: 140px; 
+    margin: .2rem;
+  }
+  }

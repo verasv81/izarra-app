@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
-import { AccordionModule } from 'primeng/accordion';
+import { InputTextModule } from 'primeng/inputtext';
 import { HomeComponent } from './pages/home/home.component';
 import { TopNavComponent } from './pages/shared/top-nav/top-nav.component';
 import { HeroComponent } from './pages/home/hero/hero.component';
@@ -34,6 +35,9 @@ import { ArticleContentComponent } from './pages/bolg/article-content/article-co
 import { ServiceDetailsComponent } from './pages/services/service-details/service-details.component';
 import { ReviewCardComponent } from './pages/services/review-card/review-card.component';
 import { SharedModule } from './shared/shared.module';
+import { FilterMenuComponent } from './pages/services/filter-menu/filter-menu.component';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { BackComponent } from './pages/shared/back/back.component';
 
 @NgModule({
   declarations: [
@@ -61,18 +65,22 @@ import { SharedModule } from './shared/shared.module';
     BlogPreviewComponent,
     ArticleContentComponent,
     ServiceDetailsComponent,
-    ReviewCardComponent
+    ReviewCardComponent,
+    FilterMenuComponent,
+    BackComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    AccordionModule,
     CardModule,
     ButtonModule,
     SharedModule.forRoot(),
     FormsModule,
     CarouselModule,
+    OverlayPanelModule,
+    BrowserAnimationsModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

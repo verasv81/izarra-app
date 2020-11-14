@@ -1,14 +1,14 @@
-<div class="card-container text-center">
+<div class="m-3 text-center card-container">
   <img
     src="{{imageSrc}}"
-    class="m-5 m-md-0 card-image"
+    class="m-2 m-md-0 card-image"
   >
   <div class="card-content">
     <h5 class="card-title">{{title}}</h5>
     <p class="card-description">{{description}}</p>
     <button
       class="btn card-button"
-      style="background-color: btnColor;"
+      [ngClass]="{'join-btn': join === 'true'}"
       (click)="gotoCatalog()"
     >{{btnTitle}}</button>
   </div>

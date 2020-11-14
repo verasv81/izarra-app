@@ -33,8 +33,10 @@ body {
   }
 }
 
-li > .p-highlight.p-link {
-  background-color: #51289C!important;
-}
-
 @import '../styles.scss';
+
+:host ::ng-deep{
+  .p-carousel .p-highlight button {
+    background: #51289C!important;
+  }
+}

@@ -2,15 +2,15 @@
   [routerLink]="['/catalog', id]"
   style="text-decoration: none;"
 >
-  <div class="row service-card mt-3">
-    <div class="mt-4 col-2 text-center">
+  <div class="d-flex flex-column flex-md-row service-card mt-3">
+    <div class="m-4 text-center">
       <img
-        src="{{image}}"
+        src="../../../../assets/card-logo.png"
         width="50px"
       >
     </div>
 
-    <div class="col-9 my-3">
+    <div class="my-2 p-2">
       <h5 class="title">{{title}}</h5>
       <p class="content">{{content}}</p>
       <ul class="tag-list">

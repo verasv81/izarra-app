@@ -1,19 +1,19 @@
 <app-top-nav></app-top-nav>
 <div class="container">
-  <h3 class="services-heading my-5">Catalog Servicii</h3>
+  <h3 class="services-heading row my-3 ml-1 my-md-5">Catalog Servicii</h3>
   <div class="row my-5">
-    <div class="col-3">
+    <div class="d-none d-lg-block col-3">
       <app-filter></app-filter>
     </div>
-    <div class="col-8 ml-5">
+    <div class="col-12 col-md-9 pl-3 pl-md-5">
       <app-service-search></app-service-search>
       <div *ngFor="let company of companies">
         <app-service-card
+          id="{{company._id}}"
           image="{{company.logo}}"
           title="{{company.name}}"
           content="{{company.description}}"
           [tags]="tags"
-          (loadDetails)="loadDetails(company._id)"
         ></app-service-card>
       </div>
       <div class="text-center pagination">

@@ -28,3 +28,12 @@
   color: #51289C;
 }
 
+#pr_id_1 .p-carousel-item {
+  flex: 1 0 70%!important;
+}
+
+:host ::ng-deep{
+  .p-carousel-indicator .p-highlight button {
+    background: red!important;
+  }
+}

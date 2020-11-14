@@ -1,23 +1,22 @@
-<div
-  class="card"
-  style="width: 240px;border: none;"
->
+<div class="specialist-card">
   <img
     class="card-img-top"
     src="{{image}}"
     alt="Card image cap"
-    width="50"
   >
   <div class="card-body">
-    <div class="row">
-      <div class="col">
+    <div
+      class="d-flex flex-row"
+      style="justify-content: space-evenly;"
+    >
+      <div class="m-2">
         <h5 class="card-title">{{title}}</h5>
         <p class="card-mini">{{domain}}</p>
       </div>
-      <div class="col text-right">
+      <div class="m-1 text-right">
         <img
           src="{{logo}}"
-          width="62"
+          class="special-logo"
         >
       </div>
     </div>
