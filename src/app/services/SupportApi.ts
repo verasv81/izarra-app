@@ -8,7 +8,7 @@ import { defaultResponseHandler, extendObj, getRequestOptions, getRequestBody } 
 @Injectable()
 export class SupportApi {
 
-  protected basePath = 'http://localhost:3005';
+  protected basePath = 'http://izarra.co/api';
 
   constructor(protected http: HttpClient) { }
 

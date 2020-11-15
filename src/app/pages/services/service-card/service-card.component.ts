@@ -10,10 +10,18 @@ export class ServiceCardComponent implements OnInit {
   @Input() title;
   @Input() content;
   @Input() image;
-  @Input() tags;
+  @Input() tags: string;
+  tagList = [];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+    if (this.tags.includes(',')) {
+      console.log(this.tags);
+      this.tagList.push(...this.tags.split(','));
+    } else {
+      this.tagList.push(this.tags);
+    }
   }
 }

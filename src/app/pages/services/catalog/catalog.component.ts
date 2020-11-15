@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CompaniesApi } from 'src/app/services';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-catalog',
@@ -8,19 +9,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./catalog.component.scss']
 })
 export class CatalogComponent implements OnInit {
-  tags = ['Decor', 'Pre-Payment', 'Superb 9+'];
-  companies = [];
+  // tags = ['Decor', 'Pre-Payment', 'Superb 9+'];
+  companies;
+  searchText = '';
+  selectedTags = [];
+
   constructor(
     private companyApi: CompaniesApi,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.companyApi.companiesGet().subscribe((res) => { this.companies = res as any; });
+    this.route.queryParams.pipe(filter(params => params.search)).subscribe(params => {
+      this.searchText = params.search;
+    });
+
+    this.companyApi.companiesGet().subscribe(res => this.companies = res as any);
   }
+
 
   loadDetails(id) {
     this.router.navigate([`catalog/${id}`]);
   }
 
+  filter(e) {
+    if (this.selectedTags.indexOf(e) !== -1) {
+      this.selectedTags.push(e);
+    }
+    // this.companies = this.companies.filter(item => item?.tags?.some(it => this.selectedTags.includes(it.toLocaleLowerCase())));
+  }
 }

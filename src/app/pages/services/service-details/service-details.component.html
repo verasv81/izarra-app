@@ -17,8 +17,8 @@
         src="https://s3-alpha-sig.figma.com/img/f23b/65e8/e2a63731ceb64f983ac5d31b520862f1?Expires=1605484800&Signature=Uqmd0zP2Nmq6GMbyXo1nEWlFYsmT9fMIOzh3nKlrOOR2CAKJikAi3ECUMkuUKzXcT8ZiqJELd8R5vWL25LYHLQWRYYLHYF4OAnUENp-r7aeskhCDO3HW6JpHybLLf1dmPJZiwkecyV7QXJpXYbLBlZ3HzdAEfVU6LJgVc0YTlS0GUSIU-Ql7iH49PwdesfXwV-uJg7t4o-uNOpfxraaLIYgusuakzPGSmDs7-1VAY1pd4rRbNGBhE4b0WAOQ7MFpVAc7cn4l50cckPjaC1w2M5AaD3hkTHaT2lONYiu1~2VHc7lYbDAbjKDd2EiqVykdA25vmDraI9TygFcXYkED2A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
       >
       <h3 class="mt-5 service-name">{{company.name}}</h3>
-      <div class="row">
-        <div class="mt-3 col-2">
+      <div class="d-flex">
+        <div class="mt-3">
           <p class="service-contacts">
             Web:<br>
             Mail:<br>
@@ -26,7 +26,7 @@
             Socials:
           </p>
         </div>
-        <div class="mt-3 service-details ml-1 col-6">
+        <div class="mt-3 service-details ml-1">
           <a href="www.floralsoul.md">{{company.domain? company.domain : '-'}}</a>
           <p>
             {{company.email ? company.email : '-'}} <br>
@@ -118,24 +118,30 @@
           </p>
         </div>
       </div>
-      <div class="row">
+      <div
+        *ngIf="company.tags.length > 0"
+        class="row"
+      >
         <div class="col-12">
           <ul class="tag-list">
-            <li class="mr-2"><span class="badge badge-primary tag tag-orange">{{tags[0]}}</span></li>
-            <li class="mr-2"><span class="badge badge-primary tag tag-blue">{{tags[1]}}</span></li>
-            <li class="mr-2"><span class="badge badge-primary tag tag-green">{{tags[2]}}</span></li>
+            <li class="mr-2"><span class="badge badge-primary tag tag-orange">{{company.tags[0]}}</span></li>
+            <li class="mr-2"><span class="badge badge-primary tag tag-blue">{{company.tags[1]}}</span></li>
+            <li class="mr-2"><span class="badge badge-primary tag tag-green">{{company.tags[2]}}</span></li>
           </ul>
         </div>
       </div>
-      <div class="row mt-5 ">
-        <div class="col-6">
+      <div
+        class="d-flex mt-5"
+        style="align-items: center;"
+      >
+        <div class="my-2">
           <a
             class="btn offer-btn"
             href="../../../../assets/card-image.png"
             download
           >Solicita Oferta</a>
         </div>
-        <div class="pt-2 col-4 heart-btn"><svg
+        <div class="mx-3 heart-btn"><svg
             width="24"
             height="22"
             viewBox="0 0 24 22"

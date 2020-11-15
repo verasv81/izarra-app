@@ -13,10 +13,13 @@
     <div class="my-2 p-2">
       <h5 class="title">{{title}}</h5>
       <p class="content">{{content}}</p>
-      <ul class="tag-list">
-        <li class="mr-2"><span class="badge badge-primary tag tag-orange">{{tags[0]}}</span></li>
-        <li class="mr-2"><span class="badge badge-primary tag tag-blue">{{tags[1]}}</span></li>
-        <li class="mr-2"><span class="badge badge-primary tag tag-green">{{tags[2]}}</span></li>
+      <ul
+        *ngIf="tagList"
+        class="tag-list"
+      >
+        <li class="mr-2"><span class="badge badge-primary tag tag-orange">{{tagList[0]}}</span></li>
+        <li class="mr-2"><span class="badge badge-primary tag tag-blue">{{tagList[1]}}</span></li>
+        <li class="mr-2"><span class="badge badge-primary tag tag-green">{{tagList[2]}}</span></li>
       </ul>
     </div>
   </div>

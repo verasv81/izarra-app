@@ -3,21 +3,56 @@
   <h3 class="services-heading row my-3 ml-1 my-md-5">Catalog Servicii</h3>
   <div class="row my-5">
     <div class="d-none d-lg-block col-3">
-      <app-filter></app-filter>
+      <app-filter (check)="filter($event)"></app-filter>
     </div>
     <div class="col-12 col-md-9 pl-3 pl-md-5">
-      <app-service-search></app-service-search>
-      <div *ngFor="let company of companies">
-        <app-service-card
-          id="{{company._id}}"
-          image="{{company.logo}}"
-          title="{{company.name}}"
-          content="{{company.description}}"
-          [tags]="tags"
-        ></app-service-card>
+      <div>
+        <input
+          type="text"
+          placeholder="Cauta de ex. Marketing"
+          [(ngModel)]="searchText"
+        >
+        <span class="icon"><svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 11C4 15.9706 8.02944 20 13 20C17.9706 20 22 15.9706 22 11C22 6.02944 17.9706 2 13 2C8.02944 2 4 6.02944 4 11Z"
+              stroke="#6E7191"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M2 22L6 18"
+              stroke="#6E7191"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
       </div>
-      <div class="text-center pagination">
-        <app-pagination></app-pagination>
+      <div *ngIf="companies?.length === 0">
+        <p>Empty company list</p>
+      </div>
+      <div *ngIf="companies?.length > 0">
+        <div *ngFor="let company of companies | appSearch: searchText">
+          <app-service-card
+            id="{{company._id}}"
+            image="{{company.logo}}"
+            title="{{company.name}}"
+            content="{{company.description}}"
+            tags="{{company.tags}}"
+          >
+          </app-service-card>
+        </div>
+        <div class="text-center pagination">
+          <app-pagination></app-pagination>
+        </div>
       </div>
     </div>
   </div>

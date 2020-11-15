@@ -39,4 +39,67 @@ body {
   .p-carousel .p-highlight button {
     background: #51289C!important;
   }
+  .p-checkbox .p-checkbox-box {
+    border: 1px solid #D6D8E7!important;
+    box-sizing: border-box!important;
+    border-radius: 1px!important;
+    background: #ffffff;
+    outline: none;
+  }
+
+  .p-checkbox .p-checkbox-box:hover {
+    background: #ffffff!important;
+
+  }
+
+  .p-checkbox-label {
+    margin: 2px 10px!important;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+  }
+
+  .p-listbox .p-highlight {
+    background: #ffffff!important;
+  }
+
+  .p-checkbox-label-active {
+    font-weight: 600;
+    color: #4E4B66;
+  }
+
+  .pi-check:before {
+    color: #51289C!important ;
+    font-weight: 800;
+  }
+
+  .p-listbox-header {
+    display: none;
+  }
+
+  .p-listbox {
+    border: none;
+  }
+
+  .p-listbox .p-listbox-list .p-listbox-item {
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.75px;
+    color: #4E4B66;
+  }
+
+  .p-listbox .p-listbox-list .p-listbox-item:hover {
+    background: white!important;
+  }
+
+  .p-listbox .p-listbox-list .p-listbox-item.p-highlight >span {
+    font-weight: 600;
+  }
+
+  .p-listbox .p-listbox-list .p-listbox-item:focus {
+    box-shadow: unset!important;
+  }
 }
+

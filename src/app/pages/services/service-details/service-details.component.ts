@@ -29,7 +29,6 @@ export class ServiceDetailsComponent implements OnInit {
       this.facebook = this.company?.facebookUrl?.length > 0;
       this.linkedin = this.company?.linkedinUrl?.length > 0;
       this.instagram = this.company?.instagramUrl?.length > 0;
-      console.log(this.company);
     });
   }
 }

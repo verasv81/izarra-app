@@ -7,14 +7,14 @@
       >
         <i
           class="pi pi-search"
-          style="font-size: 1.4rem;color: #ffffff;"
+          style="font-size: 1.4rem;color: #ffffff; margin-right: 15px;"
         ></i>
         <input
           type="text"
           pInputText
-          [(ngModel)]="value1"
           placeholder="Cauta de ex. Marketing"
           class="hero-search"
+          (keyup.enter)="search($event.target.value)"
         >
       </span>
     </div>

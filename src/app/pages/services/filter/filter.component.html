@@ -27,35 +27,16 @@
     </div>
   </a>
   <div
-    class="collapse"
+    class="py-2 collapse"
     id="collapseMarketing"
   >
-    <div class="pt-3">
-      <p>
-        <input type="checkbox" /> SMM
-      </p>
-      <p>
-        <input type="checkbox" /> Email
-      </p>
-      <p>
-        <input type="checkbox" /> Printing
-      </p>
-      <p>
-        <input type="checkbox" /> Branding
-      </p>
-      <p>
-        <input type="checkbox" /> PR
-      </p>
-      <p>
-        <input type="checkbox" /> Media
-      </p>
-      <p>
-        <input type="checkbox" /> Design
-      </p>
-      <p>
-        <input type="checkbox" /> Consulting
-      </p>
-    </div>
+    <p-listbox
+      [options]="marketing"
+      checkbox="true"
+      multiple="true"
+      [(ngModel)]="selectedValues"
+      (onClick)="filter($e)"
+    ></p-listbox>
   </div>
 </div>
 <div class="line my-3"></div>
@@ -90,21 +71,15 @@
   <div
     class="collapse"
     id="collapseRating"
+    class="py-2"
   >
-    <div class="pt-3">
-      <p>
-        <input type="checkbox" /> Super 9+
-      </p>
-      <p>
-        <input type="checkbox" /> Very good 8+
-      </p>
-      <p>
-        <input type="checkbox" /> Good 7+
-      </p>
-      <p>
-        <input type="checkbox" /> Pleasant 7+
-      </p>
-    </div>
+    <p-listbox
+      [options]="rating"
+      checkbox="true"
+      multiple="true"
+      [(ngModel)]="selectedValues"
+      (onClick)="filter($e)"
+    ></p-listbox>
   </div>
 </div>
 <div class="line my-3"></div>
@@ -139,20 +114,14 @@
   <div
     class="collapse"
     id="collapsePayment"
+    class="py-2"
   >
-    <div class="pt-3">
-      <p>
-        <input type="checkbox" /> Pre-Payment
-      </p>
-      <p>
-        <input type="checkbox" /> Post-Payment
-      </p>
-      <p>
-        <input type="checkbox" /> Free Consultation
-      </p>
-      <p>
-        <input type="checkbox" /> After Delivery
-      </p>
-    </div>
+    <p-listbox
+      [options]="payment"
+      checkbox="true"
+      multiple="true"
+      [(ngModel)]="selectedValues"
+      (onClick)="filter()"
+    ></p-listbox>
   </div>
 </div>

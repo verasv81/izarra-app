@@ -8,11 +8,11 @@ import { defaultResponseHandler, extendObj, getRequestOptions } from './apiUtils
 @Injectable()
 export class CompaniesApi {
 
-  protected basePath = 'http://localhost:3005';
+  protected basePath = 'http://izarra.co/api';
 
   constructor(protected http: HttpClient) { }
-  public companiesGet(extraHttpRequestParams?: any): Observable<{}> {
-    return this.companiesGetWithHttpInfo(extraHttpRequestParams)
+  public companiesGet(search?: string): Observable<{}> {
+    return this.companiesGetWithHttpInfo(search)
       .pipe(map(defaultResponseHandler));
   }
 
@@ -20,20 +20,16 @@ export class CompaniesApi {
     return this.companyGetWithHttpInfo(id, extraHttpRequestParams)
       .pipe(map(defaultResponseHandler));
   }
-  public companiesGetWithHttpInfo(extraHttpRequestParams?: any): any {
+  private companiesGetWithHttpInfo(search?: string): any {
 
-    const path = `${this.basePath}/company`;
+    const path = `${this.basePath}/company` + (search ? `?search=${search}` : '');
 
-    let options = getRequestOptions();
-
-    if (extraHttpRequestParams) {
-      options = extendObj(options, extraHttpRequestParams);
-    }
+    const options = getRequestOptions();
 
     return this.http.get(path, options);
   }
 
-  public companyGetWithHttpInfo(id: string, extraHttpRequestParams?: any): any {
+  private companyGetWithHttpInfo(id: string, extraHttpRequestParams?: any): any {
 
     const path = `${this.basePath}/company/${id}`;
 

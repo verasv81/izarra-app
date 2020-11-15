@@ -10,6 +10,7 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 import { InputTextModule } from 'primeng/inputtext';
+import { ListboxModule } from 'primeng/listbox';
 import { HomeComponent } from './pages/home/home.component';
 import { TopNavComponent } from './pages/shared/top-nav/top-nav.component';
 import { HeroComponent } from './pages/home/hero/hero.component';
@@ -38,6 +39,8 @@ import { SharedModule } from './shared/shared.module';
 import { FilterMenuComponent } from './pages/services/filter-menu/filter-menu.component';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { BackComponent } from './pages/shared/back/back.component';
+import { SearchPipe } from 'src/pipes/search.pipe';
+import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
   declarations: [
@@ -67,7 +70,8 @@ import { BackComponent } from './pages/shared/back/back.component';
     ServiceDetailsComponent,
     ReviewCardComponent,
     FilterMenuComponent,
-    BackComponent
+    BackComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
@@ -80,7 +84,9 @@ import { BackComponent } from './pages/shared/back/back.component';
     CarouselModule,
     OverlayPanelModule,
     BrowserAnimationsModule,
-    InputTextModule
+    InputTextModule,
+    CheckboxModule,
+    ListboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
