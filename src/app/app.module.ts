@@ -41,6 +41,7 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { BackComponent } from './pages/shared/back/back.component';
 import { SearchPipe } from 'src/pipes/search.pipe';
 import { CheckboxModule } from 'primeng/checkbox';
+import { JoinComponent } from './join/join.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { CheckboxModule } from 'primeng/checkbox';
     ReviewCardComponent,
     FilterMenuComponent,
     BackComponent,
-    SearchPipe
+    SearchPipe,
+    JoinComponent
   ],
   imports: [
     BrowserModule,

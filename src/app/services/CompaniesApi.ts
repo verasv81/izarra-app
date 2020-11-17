@@ -8,7 +8,7 @@ import { defaultResponseHandler, extendObj, getRequestOptions } from './apiUtils
 @Injectable()
 export class CompaniesApi {
 
-  protected basePath = 'http://izarra.co/api';
+  protected basePath = 'https://izarra.co/api';
 
   constructor(protected http: HttpClient) { }
   public companiesGet(search?: string): Observable<{}> {

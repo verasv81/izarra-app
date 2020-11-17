@@ -16,8 +16,9 @@
 </div>
 <div class="d-flex flex-column flex-lg-row mb-5 mb-lg-0 contacts">
   <div class="contacts-container">
-    <h3 class="contact-heading mb-4">Contacte</h3>
-    <p class="contact-text">Need a hand? Or a high five? <br>Here’s how to reach us:</p>
+    <h3 class="contact-heading mb-4">Contact</h3>
+    <p class="contact-text">Ai o nelămurire sau pur și simplu vrei <br>să ne spui mai multe despre tine?
+      <br>Hai să ne cunoaștem.</p>
     <h5 class="contacts-subheading mt-4">Email:</h5>
     <p class="contact-text">izarra@gmail.com</p>
     <h5 class="contacts-subheading  mt-4">Phone:</h5>
@@ -29,14 +30,14 @@
   </div>
   <div class="email-container">
     <div>
-      <img
+      <!-- <img
         src="../../assets/hero-icon.png"
         class="d-none d-lg-block contact-icon"
-      >
-      <h3 class="contact-heading mb-4">Get in touch about everything:</h3>
+      > -->
+      <h3 class="contact-heading mb-4">Lasă-ne un mesaj și te contactăm noi:</h3>
       <input
         type="text"
-        placeholder="Full Name"
+        placeholder="Nume Prenume"
         class="email-input my-3"
         [(ngModel)]="name"
       >
@@ -48,7 +49,7 @@
       />
       <div style="z-index: 999999;">
         <textarea
-          placeholder="Your Message"
+          placeholder="Mesajul"
           class="email-input message-input my-3"
           [(ngModel)]="text"
         ></textarea>
