@@ -6,10 +6,9 @@
   <div class="container">
     <h3 class=" mt-5 title">{{title}}</h3>
     <p class=" mt-4 date">{{date}}</p>
-    <p class="content">{{content[0]}}</p>
-    <p class="content">{{content[1]}}</p>
-    <p class="content">{{content[2]}}</p>
-    <p class="content">{{content[3]}}</p>
+    <div *ngFor="let c of content">
+      <p class="content">{{c}} </p>
+    </div>
     <p>Distribuie <span
         data-href="http://izarra.co/blog-preview/"
         data-size="small"
