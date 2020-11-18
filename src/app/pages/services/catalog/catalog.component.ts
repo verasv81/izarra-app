@@ -34,9 +34,6 @@ export class CatalogComponent implements OnInit {
   }
 
   filter(e) {
-    if (this.selectedTags.indexOf(e) !== -1) {
-      this.selectedTags.push(e);
-    }
-    // this.companies = this.companies.filter(item => item?.tags?.some(it => this.selectedTags.includes(it.toLocaleLowerCase())));
+    this.selectedTags = e;
   }
 }

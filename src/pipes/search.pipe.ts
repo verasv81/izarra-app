@@ -16,12 +16,11 @@ export class SearchPipe implements PipeTransform {
     if (!searchText) {
       return items;
     }
-    searchText = searchText.toLocaleLowerCase();
 
+    searchText = searchText?.toLocaleLowerCase();
     return items.filter(it => {
-      // TODO: fix this stuff
-      return it?.tags.reduce((a, b) => a || RegExp(b).test(searchText), false) || it.name.toLocaleLowerCase().includes(searchText)
-        || it.full_description.toLocaleLowerCase().includes(searchText);
+      return it?.tags?.join()?.toLocaleLowerCase()?.includes(searchText) || it?.name?.toLocaleLowerCase().includes(searchText)
+        || it?.full_description?.toLocaleLowerCase().includes(searchText);
     });
   }
 }

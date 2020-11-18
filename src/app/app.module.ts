@@ -42,7 +42,8 @@ import { BackComponent } from './pages/shared/back/back.component';
 import { SearchPipe } from 'src/pipes/search.pipe';
 import { CheckboxModule } from 'primeng/checkbox';
 import { JoinComponent } from './join/join.component';
-
+import { DialogModule } from 'primeng/dialog';
+import { FilterPipe } from 'src/pipes/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +74,8 @@ import { JoinComponent } from './join/join.component';
     FilterMenuComponent,
     BackComponent,
     SearchPipe,
-    JoinComponent
+    JoinComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -89,6 +91,7 @@ import { JoinComponent } from './join/join.component';
     InputTextModule,
     CheckboxModule,
     ListboxModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

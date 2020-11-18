@@ -16,10 +16,10 @@
       <p class="card-description">Bucură-te de acces la o bază de date de companii verificate și o comunitate vastă de
         antreprenoare. Comunică direct pe
         platformă folosind contul tău Gmail.</p>
-      <button
+      <a
         class="btn card-button"
-        (click)="gotoCatalog()"
-      >Găsește companii</button>
+        [routerLink]="['/catalog']"
+      >Găsește companii</a>
     </div>
   </div>
   <div class="m-3 text-center card-container">
@@ -32,11 +32,11 @@
       <p class="card-description">Ai prilejul de a te reuni cu femei implicate în business și ai posibilitatea să
         contactezi furnizori atent selecționați.
         Creează-ți o prezență online.<br>&nbsp;</p>
-      <button
+      <a
         class="btn card-button"
-        (click)="gotoCatalog()"
+        [routerLink]="['/join']"
         style="background: #196096;"
-      >Fii parte din comunitate</button>
+      >Fii parte din comunitate</a>
     </div>
   </div>
 </div>

@@ -17,8 +17,15 @@ export class ServiceCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.initTags();
+  }
+
+  initTags() {
+    if (this.tagList.includes(this.tags)) {
+      return;
+    }
+
     if (this.tags.includes(',')) {
-      console.log(this.tags);
       this.tagList.push(...this.tags.split(','));
     } else {
       this.tagList.push(this.tags);

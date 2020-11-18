@@ -8,7 +8,7 @@ import { defaultResponseHandler, extendObj, getRequestOptions } from './apiUtils
 @Injectable()
 export class CompaniesApi {
 
-  protected basePath = 'https://izarra.co/api';
+  protected basePath = 'http://localhost:3006/api';
 
   constructor(protected http: HttpClient) { }
   public companiesGet(search?: string): Observable<{}> {
@@ -20,6 +20,21 @@ export class CompaniesApi {
     return this.companyGetWithHttpInfo(id, extraHttpRequestParams)
       .pipe(map(defaultResponseHandler));
   }
+
+  public join(data): Observable<{}> {
+    return this.joinWithHttpInfo(data)
+      .pipe(map(defaultResponseHandler));
+  }
+
+  public joinWithHttpInfo(data): any {
+    const path = `${this.basePath}/company`;
+
+    let options = getRequestOptions();
+    options = extendObj(options, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } });
+
+    return this.http.post(path, data, options);
+  }
+
   private companiesGetWithHttpInfo(search?: string): any {
 
     const path = `${this.basePath}/company` + (search ? `?search=${search}` : '');
@@ -41,4 +56,6 @@ export class CompaniesApi {
 
     return this.http.get(path, options);
   }
+
+
 }

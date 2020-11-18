@@ -65,3 +65,9 @@
 ::placeholder {
   color: #A0A3BD;
 }
+
+@media only screen and (max-width: 600px) {
+  .join-form {
+    margin: 0px 12%;
+  }
+}

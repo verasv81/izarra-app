@@ -40,7 +40,7 @@
         <p>Empty company list</p>
       </div>
       <div *ngIf="companies?.length > 0">
-        <div *ngFor="let company of companies | appSearch: searchText">
+        <div *ngFor="let company of companies | appSearch: searchText | appFilter: selectedTags">
           <app-service-card
             id="{{company._id}}"
             image="{{company.logo}}"

@@ -7,6 +7,7 @@
       antreprenoare și permite crearea unui profil al companiei pentru o prezență distinctă online. E nevoie să
       completezi
       doar un formular pus la dispoziție pentru înregistrare:</p>
+
     <div class="my-5">
       <div
         class="d-flex flex-column flex-lg-row"
@@ -22,6 +23,7 @@
             type="text"
             class="form-control input-style"
             placeholder="Star International"
+            [(ngModel)]="company"
           >
         </div>
 
@@ -35,6 +37,7 @@
             type="text"
             class="form-control input-style"
             placeholder="Anastasia Myson"
+            [(ngModel)]="name"
           >
         </div>
       </div>
@@ -50,13 +53,14 @@
             id="description-input"
             type="text"
             class="form-control input-style"
-            placeholder="Mesajul tau"
+            placeholder="Descrierea și serviciile prestate"
             style="width: 100%;"
+            [(ngModel)]="description"
           ></textarea>
         </div>
       </div>
 
-      <div class="mt-4">
+      <!-- <div class="mt-4">
         <label
           for="img-input"
           class="input-label"
@@ -64,27 +68,24 @@
         <div class="form-inline">
           <div class="form-group">
             <input
-              id="img-input"
+              id="logo-input"
               type="text"
               class="form-control input-style"
+              [(ngModel)]="logoVisual"
+            ><input
+              type="file"
+              class="input-style"
+              style="display: none;"
+              (change)="onLogoFileChanged($event)"
+              #logoInput
             >
             <button
-              class="btn ml-3 upload-btn"
-              (click)="fileInput.click()"
+              class="btn ml-0 ml-lg-3 mt-2 mt-lg-0 upload-btn"
+              (click)="logoInput.click()"
             >Incarca</button>
           </div>
         </div>
-        <!-- <div class="form-group">
-
-          <input
-            type="file"
-            class="input-style"
-            style="display: none;"
-            (change)="onFileChanged($event)"
-            #fileInput
-          >
-        </div> -->
-      </div>
+      </div> -->
 
       <div
         class="mt-4 d-flex flex-column flex-lg-row"
@@ -100,6 +101,7 @@
             class="form-control input-style"
             id="email-input"
             placeholder="company@mail.com"
+            [(ngModel)]="email"
           >
         </div>
 
@@ -113,6 +115,7 @@
             type="text"
             class="form-control input-style"
             placeholder="+373 67426445"
+            [(ngModel)]="phone"
           >
         </div>
       </div>
@@ -132,6 +135,7 @@
             type="text"
             class="form-control input-style"
             placeholder="https://www...."
+            [(ngModel)]="domain"
           >
         </div>
 
@@ -146,6 +150,7 @@
             type="text"
             class="form-control input-style"
             placeholder="https://www...."
+            [(ngModel)]="instaUrl"
           >
         </div>
       </div>
@@ -164,6 +169,7 @@
             type="text"
             class="form-control input-style"
             placeholder="https://www...."
+            [(ngModel)]="fbUrl"
           >
         </div>
 
@@ -177,12 +183,79 @@
             type="text"
             class="form-control input-style"
             placeholder="https://www...."
+            [(ngModel)]="liUrl"
           >
+        </div>
+      </div>
+      <!-- <div class="mt-4">
+        <label
+          for="img-input"
+          class="input-label"
+        >Imaginea Companiei</label>
+        <div class="form-inline">
+          <div class="form-group">
+            <input
+              id="img-input"
+              type="text"
+              class="form-control input-style"
+            ><input
+              type="file"
+              class="input-style"
+              style="display: none;"
+              (change)="onFileChanged($event)"
+              #imgInput
+            >
+            <button
+              class="btn ml-0 ml-lg-3 mt-2 mt-lg-0 upload-btn"
+              (click)="imgInput.click()"
+            >Incarca</button>
+          </div>
+        </div>
+      </div> -->
+      <div class="mt-4 p-d-flex">
+        <div class="form-group">
+
+          <label
+            for="description-input"
+            class="input-label"
+          >Oferta Companiei</label>
+          <textarea
+            id="description-input"
+            type="text"
+            class="form-control input-style"
+            placeholder="Descrie în 1-2 propoziții oferta"
+            style="width: 100%;"
+            [(ngModel)]="offer"
+          ></textarea>
         </div>
       </div>
 
     </div>
-    <button class="btn join-btn">Înregistrare Companie</button>
+    <button
+      class="btn join-btn"
+      (click)="join()"
+    >Înregistrare Companie</button>
+
   </div>
 </div>
 <app-footer></app-footer>
+
+<p-dialog
+  [showHeader]="false"
+  [(visible)]="display"
+  [modal]="true"
+  [style]="{width: '50vw'}"
+  [baseZIndex]="10000"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <p class="p-m-0">Compania ta a fost adăugată cu success. Va dura ceva timp pînă va apărea în lista noastră.</p>
+  <ng-template pTemplate="footer">
+    <p-button
+      icon="pi pi-check"
+      (click)="hide()"
+      label="Ok"
+      styleClass="p-button-text"
+    ></p-button>
+  </ng-template>
+</p-dialog>

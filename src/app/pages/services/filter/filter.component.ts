@@ -12,14 +12,17 @@ export class FilterComponent implements OnInit {
   marketing = [
     { label: 'SEO', value: 'seo' },
     { label: 'Email Marketing', value: 'email marketing' },
-    { label: 'Printing', value: 'printing' },
-    { label: 'Branding', value: 'branding' },
-    { label: 'PR', value: 'pr' },
     { label: 'Media', value: 'media' },
     { label: 'Decor', value: 'decor' },
     { label: 'Accounting', value: 'accounting' },
+    { label: 'Financial', value: 'financial' },
     { label: 'Consulting', value: 'consulting' },
-    { label: 'Investment', value: 'investment' }
+    { label: 'Investment', value: 'investment' },
+    { label: 'Architecture', value: 'architecture' },
+    { label: 'Kids', value: 'kids' },
+    { label: 'Education', value: 'education' },
+    { label: 'Catering', value: 'catering' },
+    { label: 'HR', value: 'human resources' },
   ];
 
   rating = [
