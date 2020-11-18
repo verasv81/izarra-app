@@ -11,6 +11,7 @@ export class SpecialistsCardComponent implements OnInit {
   @Input() description;
   @Input() logo;
   @Input() image;
+  @Input() id;
 
   constructor() { }
 

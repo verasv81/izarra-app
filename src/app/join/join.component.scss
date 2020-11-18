@@ -1,0 +1,67 @@
+.join-form {
+  margin: 0 15%;
+}
+.join-header {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.75px;
+  color: #51289C;
+}
+
+.join-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #000000;
+}
+
+.join-btn {
+  padding: 14px 32px;
+  background: #51289C;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #FFFFFF;
+}
+
+.upload-btn {
+  background: #6E7191;
+  border-radius: 4px;
+  padding: 14px 32px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #FFFFFF;
+  width: 143px;
+}
+
+.input-label {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #2D3748;
+}
+
+.input-style {
+  background: #FFFFFF;
+  border: 2px solid #D6D8E7;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #A0A3BD;
+  padding: 18px 24px;
+  width:360px;
+}
+
+::placeholder {
+  color: #A0A3BD;
+}

@@ -34,3 +34,36 @@
     height: 10px!important;
   }
 }
+
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #14142B;
+}
+
+.date {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  color: #6E7191;
+}
+
+p, li {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.75px;
+  color: #4E4B66;
+}
+
+.image{
+  width: 100%;
+  height: 370px;
+  border-radius: 4px;
+  overflow: hidden;
+  object-fit: cover;
+}

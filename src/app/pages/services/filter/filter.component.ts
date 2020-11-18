@@ -10,14 +10,16 @@ export class FilterComponent implements OnInit {
   selectedValues: any[] = [];
 
   marketing = [
-    { label: 'SMM', value: 'smm' },
-    { label: 'Email', value: 'email' },
+    { label: 'SEO', value: 'seo' },
+    { label: 'Email Marketing', value: 'email marketing' },
     { label: 'Printing', value: 'printing' },
     { label: 'Branding', value: 'branding' },
     { label: 'PR', value: 'pr' },
     { label: 'Media', value: 'media' },
-    { label: 'Design', value: 'design' },
-    { label: 'Consulting', value: 'consulting' }
+    { label: 'Decor', value: 'decor' },
+    { label: 'Accounting', value: 'accounting' },
+    { label: 'Consulting', value: 'consulting' },
+    { label: 'Investment', value: 'investment' }
   ];
 
   rating = [

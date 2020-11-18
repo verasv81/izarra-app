@@ -10,6 +10,7 @@ export class BlogCardComponent implements OnInit {
   @Input() image;
   @Input() content;
   @Input() date;
+  @Input() url;
 
   constructor() { }
 

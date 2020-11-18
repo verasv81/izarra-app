@@ -1,25 +1,31 @@
 <div class="specialist-card">
-  <img
-    class="card-img-top"
-    src="{{image}}"
-    alt="Card image cap"
+  <a
+    [routerLink]="['/catalog', id]"
+    style="text-decoration: none;"
   >
-  <div class="card-body">
-    <div
-      class="d-flex flex-row"
-      style="justify-content: space-evenly;"
+    <img
+      class="card-img-top"
+      src="{{image ? image : '../../../../../../assets/default-logo.png'}}"
+      alt="Card image cap"
+      style="height: 260px; width: 100%; object-fit: cover;"
     >
-      <div class="m-2">
-        <h5 class="card-title">{{title}}</h5>
-        <p class="card-mini">{{domain}}</p>
+    <div class="card-body">
+      <div
+        class="d-flex flex-row"
+        style="justify-content: space-between;"
+      >
+        <div>
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-mini">{{domain}}</p>
+        </div>
+        <div class="m-1 text-right">
+          <img
+            src="{{logo}}"
+            class="special-logo"
+          >
+        </div>
       </div>
-      <div class="m-1 text-right">
-        <img
-          src="{{logo}}"
-          class="special-logo"
-        >
-      </div>
+      <p class="card-text">{{description}}</p>
     </div>
-    <p class="card-text">{{description}}</p>
-  </div>
+  </a>
 </div>

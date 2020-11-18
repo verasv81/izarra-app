@@ -5,18 +5,23 @@
     title="Catalog Servicii"
   ></app-back>
   <div class="row m-5">
-    <div class="col-6">
+    <div
+      class="col-6"
+      style="display: flex; justify-content: center;"
+    >
       <img
         class="d-none d-md-block service-detail-image"
-        src="../../../../assets/card-image.png"
+        src="{{company.image}}"
       >
     </div>
     <div class="col col-md-4 company-description">
       <img
         class="service-detail-icon"
-        src="https://s3-alpha-sig.figma.com/img/f23b/65e8/e2a63731ceb64f983ac5d31b520862f1?Expires=1605484800&Signature=Uqmd0zP2Nmq6GMbyXo1nEWlFYsmT9fMIOzh3nKlrOOR2CAKJikAi3ECUMkuUKzXcT8ZiqJELd8R5vWL25LYHLQWRYYLHYF4OAnUENp-r7aeskhCDO3HW6JpHybLLf1dmPJZiwkecyV7QXJpXYbLBlZ3HzdAEfVU6LJgVc0YTlS0GUSIU-Ql7iH49PwdesfXwV-uJg7t4o-uNOpfxraaLIYgusuakzPGSmDs7-1VAY1pd4rRbNGBhE4b0WAOQ7MFpVAc7cn4l50cckPjaC1w2M5AaD3hkTHaT2lONYiu1~2VHc7lYbDAbjKDd2EiqVykdA25vmDraI9TygFcXYkED2A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+        src="{{company.logo? company.logo : '../../../../../../assets/default-logo.png'}}"
       >
-      <h3 class="mt-5 service-name">{{company.name}}</h3>
+      <h3 class="
+        mt-3
+        service-name">{{company.name}}</h3>
       <div class="d-flex">
         <div class="mt-3">
           <p class="service-contacts">
@@ -27,10 +32,19 @@
           </p>
         </div>
         <div class="mt-3 service-details ml-1">
-          <a href="www.floralsoul.md">{{company.domain? company.domain : '-'}}</a>
+          <a
+            href="{{company.domain}}"
+            target="_blank"
+          >{{company.domain ? company.domain : '-'}}</a>
           <p>
-            {{company.email ? company.email : '-'}} <br>
-            {{company.phone ? company.phone : '-'}} <br>
+            <a
+              href="mailto: {{company.email}}"
+              style="text-decoration: none; color: black;"
+            >{{company.email ? company.email : '-'}}</a> <br>
+            <a
+              href="tel:{{company.phone}}"
+              style="text-decoration: none; color: black;"
+            >{{company.phone ? company.phone : '-'}}</a> <br>
             <span
               class="d-flex flex-row"
               style="align-items: center"
@@ -131,13 +145,13 @@
         </div>
       </div>
       <div
-        class="d-flex mt-5"
+        class="d-flex mt-2"
         style="align-items: center;"
       >
         <div class="my-2">
           <a
             class="btn offer-btn"
-            href="../../../../assets/card-image.png"
+            href="mailto: {{company.email}}"
             download
           >Solicita Oferta</a>
         </div>
@@ -161,15 +175,14 @@
     </div>
 
   </div>
-  <div class="mx-5 service-details-text">
-    <p>
-      {{company.description}}
+  <div class="m-5 service-details-text">
+    <p><strong>
+        {{company.description}}
+      </strong>
     </p>
-    <p>
-      {{company.full_description}}
-    </p>
+    <div [innerHtml]="company.full_description"></div>
   </div>
-  <div class="d-flex flex-column flex-lg-row my-5">
+  <!-- <div class="d-flex flex-column flex-lg-row my-5">
     <div class="m-3">
       <app-review-card
         text="How to choose the best ecommerce platform for your online store. Shop around to find the best ecommerce platform for your online store. Illustration by OrangeCrush"
@@ -186,6 +199,6 @@
         company="CEO, Airbnb"
       ></app-review-card>
     </div>
-  </div>
+  </div> -->
 </div>
 <app-footer></app-footer>

@@ -1,11 +1,12 @@
 .service-detail-image{
-  width: 100%;
-  height: 404px;
+object-fit: cover;
+  width: 80%;
+  height: 100%;
 }
 
 .service-detail-icon{
   width: 86px;
-  height: 81px;
+  max-height: 100%;
 }
 
 .service-name{
@@ -47,6 +48,7 @@
 .tag-list  li {
   float: left;
 }
+
 ul {
   list-style-type: none; 
   margin: 0;

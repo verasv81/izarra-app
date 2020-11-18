@@ -6,20 +6,39 @@
 <app-hero></app-hero>
 <app-experience></app-experience>
 <div class="container d-flex flex-column flex-md-row">
-  <app-feature-card
-    imageSrc="../../assets/Izzara-01.png"
-    title="Gasește un furnizor de incredere"
-    description="Bucură-te de acces la o bază de date de companii verificate și o comunitate vastă de antreprenoare. Comunică direct pe platformă folosind contul tău Gmail."
-    btnTitle="Găsește companii"
-    join="false"
-  ></app-feature-card>
-  <app-feature-card
-    imageSrc="../../assets/Izzara-02.png"
-    title="Spune lumii despre afacerea ta!"
-    description="Ai prilejul de a te reuni cu femei implicate în business și ai posibilitatea să contactezi furnizori atent selecționați. Creează-ți o prezență online."
-    btnTitle="Fii parte din comunitate"
-    join="true"
-  ></app-feature-card>
+  <div class="m-3 text-center card-container">
+    <img
+      src="../../assets/Izzara-01.png"
+      class="m-2 m-md-0 card-image"
+    >
+    <div class="card-content">
+      <h5 class="card-title">Gasește un furnizor de incredere</h5>
+      <p class="card-description">Bucură-te de acces la o bază de date de companii verificate și o comunitate vastă de
+        antreprenoare. Comunică direct pe
+        platformă folosind contul tău Gmail.</p>
+      <button
+        class="btn card-button"
+        (click)="gotoCatalog()"
+      >Găsește companii</button>
+    </div>
+  </div>
+  <div class="m-3 text-center card-container">
+    <img
+      src="../../assets/Izzara-02.png"
+      class="m-2 m-md-0 card-image"
+    >
+    <div class="card-content">
+      <h5 class="card-title">Spune lumii despre afacerea ta!</h5>
+      <p class="card-description">Ai prilejul de a te reuni cu femei implicate în business și ai posibilitatea să
+        contactezi furnizori atent selecționați.
+        Creează-ți o prezență online.<br>&nbsp;</p>
+      <button
+        class="btn card-button"
+        (click)="gotoCatalog()"
+        style="background: #196096;"
+      >Fii parte din comunitate</button>
+    </div>
+  </div>
 </div>
 <app-specialists></app-specialists>
 <!-- <app-partners></app-partners> -->

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./join.component.scss']
 })
 export class JoinComponent implements OnInit {
+  logoFile: File;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onFileChanged(event) {
+    this.logoFile = event.target.files[0];
+  }
 }

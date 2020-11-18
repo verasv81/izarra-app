@@ -35,8 +35,9 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  /* identical to box height, or 171% */
   font-feature-settings: 'liga' off;
+  display: flex;
+  align-items: center;
 }
 
 .catalog-btn {
