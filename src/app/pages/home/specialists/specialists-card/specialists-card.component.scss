@@ -42,13 +42,23 @@
     float: right;
   }
 
+  .specialist-image {
+    height: 260px; 
+    width: 100%; 
+    object-fit: cover;
+  }
+
   @media only screen and (max-width: 400px) {
+    .specialist-image {
+      height: 140px;
+    }
+
     .special-logo {
       width: 44px;
     }
 
     .specialist-card {
-    width: 140px; 
-    margin: .2rem;
-  }
+      width: 200px; 
+      margin: 0;
+    }
   }

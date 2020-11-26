@@ -6,7 +6,7 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ServiceDetailsComponent } from './pages/services/service-details/service-details.component';
 import { CatalogComponent } from './pages/services/catalog/catalog.component';
-import { JoinComponent } from './join/join.component';
+import { JoinComponent } from './pages/join/join.component';
 import { ArticleContentComponent } from './pages/bolg/blog-1/article-content.component';
 import { BlogPreviewComponent } from './pages/bolg/blog-2/blog-preview.component';
 

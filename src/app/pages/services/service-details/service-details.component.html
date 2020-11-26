@@ -11,7 +11,7 @@
     >
       <img
         class="d-none d-md-block service-detail-image"
-        src="{{company.image}}"
+        src="{{company.image ? company.image : '../../../../../../assets/default-picture.png'}}"
       >
     </div>
     <div class="col col-md-4 company-description">

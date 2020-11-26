@@ -7,14 +7,15 @@
       >
         <i
           class="pi pi-search"
-          style="font-size: 1.4rem;color: #ffffff; margin-right: 15px;"
+          style="font-size: 1.4rem;color: #ffffff; margin-right: 22px;cursor: pointer;"
         ></i>
         <input
           type="text"
           pInputText
-          placeholder="Cauta de ex. Marketing"
+          placeholder="Caută de ex. Marketing"
           class="hero-search"
-          (keyup.enter)="search($event.target.value)"
+          (keyup)="search($event)"
+          [(ngModel)]="searchValue"
         >
       </span>
     </div>
@@ -24,7 +25,7 @@
         href="#explore"
         style="text-decoration: none;"
       >
-        <p class="explore pt-4 px-2">Sa ne cunoastem mai bine <img
+        <p class="explore pt-4 px-2">Să ne cunoaștem mai bine<img
             src="../../../assets/arrow.png"
             style="width: 16px; height: 16px;"
             class="m-1"

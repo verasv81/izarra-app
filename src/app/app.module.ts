@@ -1,6 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Meta } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -41,9 +41,11 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { BackComponent } from './pages/shared/back/back.component';
 import { SearchPipe } from 'src/pipes/search.pipe';
 import { CheckboxModule } from 'primeng/checkbox';
-import { JoinComponent } from './join/join.component';
+import { JoinComponent } from './pages/join/join.component';
 import { DialogModule } from 'primeng/dialog';
 import { FilterPipe } from 'src/pipes/filter.pipe';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -91,9 +93,12 @@ import { FilterPipe } from 'src/pipes/filter.pipe';
     InputTextModule,
     CheckboxModule,
     ListboxModule,
-    DialogModule
+    DialogModule,
+    NgxGoogleAnalyticsModule.forRoot('G-MP7Z0TZZXG'),
+    NgxGoogleAnalyticsRouterModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [Meta],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AnalyticsService } from './services/analytics.service';
+// import { AnalyticsService } from './services/analytics.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { CompaniesApi } from './services';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 
 @Component({
   selector: 'app-root',
@@ -14,25 +15,14 @@ export class AppComponent implements OnInit {
   companies;
 
   constructor(
-    private readonly analyticsService: AnalyticsService,
-    private readonly companyApi: CompaniesApi,
-    private readonly router: Router
+    protected $gaService: GoogleAnalyticsService,
   ) { }
 
   ngOnInit() {
-    
-
-    
-
-    this.analyticsService.init();
-
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        (window as any).ga('set', 'page', event.urlAfterRedirects);
-        (window as any).ga('send', 'pageview');
-      }
-    });
+    this.$gaService.pageView('/blog', 'Blog Page');
+    this.$gaService.pageView('/catalog', 'Catalog Page');
+    this.$gaService.pageView('/contacts', 'Contact Page');
+    this.$gaService.pageView('/about', 'About Page');
+    this.$gaService.pageView('/join', 'Join Page');
   }
-
-
 }

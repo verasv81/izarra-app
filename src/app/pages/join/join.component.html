@@ -1,0 +1,318 @@
+<app-top-nav></app-top-nav>
+<div class="container">
+  <div class="mb-5 join-form">
+    <h1 class="my-5 text-center join-header">Fii parte din Izarra</h1>
+    <p class="join-text">Parte din Izarra poate deveni orice femeie care conduce o afacere mică sau medie. Platforma
+      salută toate femeile
+      antreprenoare și permite crearea unui profil al companiei pentru o prezență distinctă online. E nevoie să
+      completezi
+      doar un formular pus la dispoziție pentru înregistrare:</p>
+
+    <div class="my-5">
+      <form [formGroup]="companyData">
+        <div
+          class="d-flex flex-column flex-lg-row"
+          style="justify-content: space-between;"
+        >
+          <div class="form-group">
+            <label
+              for="float-input"
+              class="input-label"
+            >Denumirea companiei</label>
+            <input
+              id="float-input"
+              type="text"
+              class="form-control input-style"
+              placeholder="Star International"
+              formControlName="company"
+            >
+            <div *ngIf="(company.invalid && company.touched) || company.dirty">
+              <small
+                *ngIf="company.errors?.required"
+                class="text-danger"
+              >Denumirea companiei este obligatorie</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label
+              for="directory-input"
+              class="input-label"
+            >Numele directorului</label>
+            <input
+              id="directory-input"
+              type="text"
+              class="form-control input-style"
+              placeholder="Anastasia Myson"
+              formControlName="name"
+            >
+            <div *ngIf="(name.invalid && name.touched) || name.dirty">
+              <small
+                *ngIf="name.errors?.required"
+                class="text-danger"
+              >Numele directorului este obligatoriu</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 p-d-flex">
+          <div class="form-group">
+
+            <label
+              for="description-input"
+              class="input-label"
+            >Prezentarea companiei</label>
+            <textarea
+              id="description-input"
+              type="text"
+              class="form-control input-style"
+              placeholder="Descrierea și serviciile prestate"
+              style="width: 100%;"
+              formControlName="description"
+            ></textarea>
+            <div *ngIf="(description.invalid && description.touched) || description.dirty">
+              <small
+                *ngIf="description.errors?.required"
+                class="text-danger"
+              >Câmpul email este obligatoriu</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="mt-4">
+        <label
+          for="img-input"
+          class="input-label"
+        >Logoul Companiei</label>
+        <div class="form-inline">
+          <div class="form-group">
+            <input
+              id="logo-input"
+              type="text"
+              class="form-control input-style"
+              [(ngModel)]="logoVisual"
+            ><input
+              type="file"
+              class="input-style"
+              style="display: none;"
+              (change)="onLogoFileChanged($event)"
+              #logoInput
+            >
+            <button
+              class="btn ml-0 ml-lg-3 mt-2 mt-lg-0 upload-btn"
+              (click)="logoInput.click()"
+            >Incarca</button>
+          </div>
+        </div>
+      </div> -->
+
+        <div
+          class="mt-4 d-flex flex-column flex-lg-row"
+          style="justify-content: space-between;"
+        >
+          <div class="form-group">
+            <label
+              for="email-input"
+              class="input-label"
+            >Email</label>
+            <input
+              type="email"
+              class="form-control input-style"
+              id="email-input"
+              placeholder="company@mail.com"
+              formControlName="email"
+              [class.is-invalid]="email.invalid && email.touched"
+            >
+            <div *ngIf="(email.invalid && email.touched) || email.dirty">
+              <small
+                *ngIf="email.errors?.required"
+                class="text-danger"
+              >Câmpul email este obligatoriu</small>
+              <small
+                *ngIf="email.errors?.pattern"
+                class="text-danger"
+              >Vă rugăm să furnizați o adresă de e-mail validă</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label
+              for="phone-input"
+              class="input-label"
+            >Nr. de telefon</label>
+            <input
+              id="phone-input"
+              type="text"
+              class="form-control input-style"
+              placeholder="+373 67 426 445"
+              formControlName="phone"
+              onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 32 || event.charCode == 43'
+            >
+            <div *ngIf="(phone.invalid && phone.touched) || phone.dirty">
+              <small
+                *ngIf="phone.errors?.required"
+                class="text-danger"
+              >Nr. de telefon este obligatoriu</small>
+              <small
+                *ngIf="phone.errors?.pattern"
+                class="text-danger"
+              >Vă rugăm să furnizați un număr de telefon valid </small>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-4 d-flex flex-column flex-lg-row"
+          style="justify-content: space-between;"
+        >
+          <div class="form-group">
+            <label
+              for="domain-input"
+              class="input-label"
+            >Pagina web</label>
+            <input
+              id="domain-input"
+              type="text"
+              class="form-control input-style"
+              placeholder="https://www...."
+              formControlName="domain"
+            >
+            <div *ngIf="(domain.invalid && domain.touched) || domain.dirty">
+              <small
+                *ngIf="domain.errors?.required"
+                class="text-danger"
+              >Pagina web este obligatorie</small>
+              <small
+                *ngIf="domain.errors?.pattern"
+                class="text-danger"
+              >Vă rugăm să furnizați o pagină web validă</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+
+            <label
+              for="insta-input"
+              class="input-label"
+            >Pagina instagram</label>
+            <input
+              id="insta-input"
+              type="text"
+              class="form-control input-style"
+              placeholder="https://www...."
+              formControlName="instaUrl"
+            >
+          </div>
+        </div>
+
+        <div
+          class="mt-4 d-flex flex-column flex-lg-row"
+          style="justify-content: space-between;"
+        >
+          <div class="form-group">
+            <label
+              for="fb-input"
+              class="input-label"
+            >Pagina facebook</label>
+            <input
+              id="fb-input"
+              type="text"
+              class="form-control input-style"
+              placeholder="https://www...."
+              formControlName="fbUrl"
+            >
+          </div>
+
+          <div class="form-group">
+            <label
+              for="li-input"
+              class="input-label"
+            >Pagina linkedin</label>
+            <input
+              id="li-input"
+              type="text"
+              class="form-control input-style"
+              placeholder="https://www...."
+              formControlName="liUrl"
+            >
+          </div>
+        </div>
+        <!-- <div class="mt-4">
+        <label
+          for="img-input"
+          class="input-label"
+        >Imaginea Companiei</label>
+        <div class="form-inline">
+          <div class="form-group">
+            <input
+              id="img-input"
+              type="text"
+              class="form-control input-style"
+            ><input
+              type="file"
+              class="input-style"
+              style="display: none;"
+              (change)="onFileChanged($event)"
+              #imgInput
+            >
+            <button
+              class="btn ml-0 ml-lg-3 mt-2 mt-lg-0 upload-btn"
+              (click)="imgInput.click()"
+            >Incarca</button>
+          </div>
+        </div>
+      </div> -->
+        <div class="mt-4 p-d-flex">
+          <div class="form-group">
+
+            <label
+              for="description-input"
+              class="input-label"
+            >Oferta companiei</label>
+            <textarea
+              id="description-input"
+              type="text"
+              class="form-control input-style"
+              placeholder="Descrie în 1-2 propoziții oferta"
+              style="width: 100%;"
+              formControlName="offer"
+            ></textarea>
+
+            <div *ngIf="(offer.invalid && offer.touched) || offer.dirty">
+              <small
+                *ngIf="offer.errors?.required"
+                class="text-danger"
+              >Oferta companiei este obligatorie</small>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+    <button
+      class="btn join-btn"
+      (click)="join()"
+    >Înregistrare companie</button>
+  </div>
+</div>
+<app-footer></app-footer>
+
+<p-dialog
+  [showHeader]="false"
+  [(visible)]="display"
+  [modal]="true"
+  [style]="{width: '50vw'}"
+  [baseZIndex]="10000"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <p class="p-m-0">Compania ta a fost adăugată cu success. Va dura ceva timp pînă va apărea în lista noastră.</p>
+  <ng-template pTemplate="footer">
+    <p-button
+      icon="pi pi-check"
+      (click)="hide()"
+      label="Ok"
+      styleClass="p-button-text"
+    ></p-button>
+  </ng-template>
+</p-dialog>

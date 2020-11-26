@@ -27,7 +27,7 @@ export class SpecialistsComponent implements OnInit {
       {
         breakpoint: '560px',
         numVisible: 1,
-        numScroll: 1
+        numScroll: 2
       }
     ];
   }
